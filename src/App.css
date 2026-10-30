@@ -1,1 +1,278 @@
-/* Paste your Assignment 1 styles.css here. Keep the icons in src/assets/ so url(assets/...) paths keep working. */
+/* This is your CSS files */
+body {
+    color: black;
+    font-family:'Roboto', sans-serif;
+    font-size: 14px;
+    margin:0;
+}
+
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+
+}
+
+.site-header {
+    background-color:#dc4c3e ;
+    color: #ffffff;
+    /* border: solid 1px black; */
+
+    display: flex;
+    align-items:center;
+    padding: 10px;
+
+}
+
+.site-header button {
+    background: none;
+    border: none;
+    margin-left: 15px;
+
+}
+
+.searchbar {
+  
+   position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.searchbar img {
+    margin-left: 5px;
+    position: absolute;
+
+}
+
+.searchbar input {
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 3px;
+
+    color: white;
+    font-size: 14px;
+    padding:  8px;
+    box-sizing: border-box;
+    padding-left: 35px;
+    width: 250px;
+    
+}
+.searchbar input::placeholder {
+    color: white;
+   
+}
+.header-count {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.site-main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+
+.navbar {
+    background-color: #fefbf2;
+    /* border: solid 1px black; */
+     padding: 25px 6px 0px 25px;
+    /* margin: 25px 0 0 25px; */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* margin-right: 10px; */
+
+
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 5px;
+     
+  
+
+}
+.navbar li:hover {
+    font-weight: bold;
+    background-color: white;
+   
+}
+
+.navbar li img {
+    display: block;
+    margin-right: 8px;
+}
+
+
+
+.main-content {
+    /* border: solid 1px black; */
+    padding: 20px;
+
+   
+}
+.main-content h1 {
+    font-size: 20px;
+     margin-bottom: 20px;
+}
+
+.task-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.task-input {
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+    outline: none;
+    padding: 8px;
+    width: 250px;
+}
+
+.task-input::placeholder {
+    color: #7e7d79;
+    opacity: 1;
+}
+
+.task-add-button {
+    background: none;
+    border: none;
+    color: #dc4c3e;
+    cursor: pointer;
+    font: inherit;
+    padding: 8px 0 8px 12px;
+}
+
+.task-add-button:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+.task-filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.task-filters button {
+    background: none;
+    border: none;
+    color: #7e7d79;
+    cursor: pointer;
+    font: inherit;
+    padding: 3px 0;
+}
+
+.task-filters button:hover,
+.task-filters button.active {
+    color: #dc4c3e;
+    font-weight: 700;
+}
+
+.task-filters button:focus-visible {
+    outline: 2px solid #dc4c3e;
+    outline-offset: 3px;
+}
+
+.task-filters span {
+    color: #7e7d79;
+    margin: 0 6px;
+}
+
+.main-content ul {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-content li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 12px;
+    border-bottom: 1px solid lightgray
+}
+
+.task-delete-button {
+    background: none;
+    border: none;
+    color: #7e7d79;
+    cursor: pointer;
+    font: inherit;
+    margin-left: auto;
+    padding: 3px 0 3px 12px;
+}
+
+.task-delete-button:hover {
+    color: #dc4c3e;
+    font-weight: 700;
+}
+
+.task-delete-button:focus-visible {
+    outline: 2px solid #dc4c3e;
+    outline-offset: 3px;
+}
+
+.completed-task {
+    color: #7e7d79;
+    text-decoration: line-through;
+}
+
+.main-content input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    border: 1px solid lightgray ;
+    border-radius: 50%;
+    margin-right: 10px;
+   
+}
+
+.main-content input[type="checkbox"]:checked {
+    background-color: black;
+}
+
+.count5 {
+    margin-left: 8px;
+    color: #7e7d79;
+    font-size: 12px;
+}
+
+
+
+
+@media(max-width: 480px) {
+    .navbar {
+        display: none;
+    }
+
+    .site-main {
+        grid-template-columns: 1fr;
+    }
+
+    .task-input {
+        width: 100%;
+    }
+
+    .list-label {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
